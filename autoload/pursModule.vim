@@ -30,7 +30,7 @@ function! s:ModuleName()
   endif
 endfunction
 
-function! hsModule#MkModuleHeader()
+function! pursModule#MkModuleHeader()
   let name=s:ModuleName()
   if !empty(name)
     return "module " . name . " where\n"
