@@ -1,6 +1,6 @@
-# hs-module-name Vim plugin
+# purs-module-name Vim plugin
 
-This vim plugin can automatically figure out and insert the name of a Haskell
+This vim plugin can automatically figure out and insert the name of a Purescript
 module based on the filename.
 
 ## Installation
@@ -10,31 +10,31 @@ or copy this repo under `~/.vim/bundle`.
 
 Otherwise, use something like
 
-    cp -r vim-hs-module-name/* ~/.vim/
+    cp -r vim-purs-module-name/* ~/.vim/
 
 ## Usage
 ### Automatic insertion
-When you create a new `.hs` file, the header
+When you create a new `.purs` file, the header
 
     module Foo.Bar where
 
 is automatically inserted, where `Foo.Bar` is the module name inferred from the
 file name.
 
-Set the `g:hs_module_no_auto` variable to disable this.
+Set the `g:purs_module_no_auto` variable to disable this.
 
 ### Manual insertion
-When you are in a buffer with the `haskell` filetype, press `M` to insert the
+When you are in a buffer with the `purescript` filetype, press `M` to insert the
 module header as described above.
 
-To use a different key sequence instead of `M`, set the `g:hs_module_mapping`
+To use a different key sequence instead of `M`, set the `g:purs_module_mapping`
 variable to the desired key sequence.
 
-Set the `g:hs_module_no_mappings` variable to disable this.
+Set the `g:purs_module_no_mappings` variable to disable this.
 
 ### Command
 If you want to set up other bindings or hooks, use the
-`:InsertHaskellModuleName` command.
+`:InsertPurescriptModuleName` command.
 
 ## How the inference works
 The components of the module name are assumed to be the largest
@@ -43,7 +43,7 @@ capital letters.
 
 E.g. for the file
 
-    /home/User/project/src/Foo/Bar.hs
+    /home/User/project/src/Foo/Bar.purs
 
 the module name is inferred to be `Foo.Bar`. This works pretty well in
 practice.
